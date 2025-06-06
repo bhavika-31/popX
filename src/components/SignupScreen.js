@@ -9,9 +9,9 @@ const SignupScreen = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitting...", name, email); // Add this line
+    console.log("Submitting...", name, email); 
     localStorage.setItem("userData", JSON.stringify({ name, email }));
-    navigate("/AccountSettingPage"); // remove state if not using it
+    navigate("/AccountSettingPage");
   };
 
   return (
