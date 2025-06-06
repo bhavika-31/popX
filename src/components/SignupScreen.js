@@ -9,8 +9,9 @@ const SignupScreen = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Submitting...", name, email); // Add this line
     localStorage.setItem("userData", JSON.stringify({ name, email }));
-    navigate("/CreateNewAccount", { state: { name, email } });
+    navigate("/AccountSettingPage"); // remove state if not using it
   };
 
   return (
@@ -29,6 +30,7 @@ const SignupScreen = () => {
               type="text"
               required
               value={name}
+              placeholder="Enter Full name"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -37,7 +39,7 @@ const SignupScreen = () => {
             <label>
               Phone number <span className="required">*</span>
             </label>
-            <input type="text" />
+            <input type="text" placeholder="Enter Phone number" />
           </div>
 
           <div className="custom-input-group">
@@ -48,6 +50,7 @@ const SignupScreen = () => {
               type="text"
               required
               value={email}
+              placeholder="Enter email address"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -56,14 +59,14 @@ const SignupScreen = () => {
             <label>
               Password <span className="required">*</span>
             </label>
-            <input type="text" />
+            <input type="text" placeholder="Enter password" />
           </div>
 
           <div className="custom-input-group">
             <label>
               Company Name <span className="required">*</span>
             </label>
-            <input type="text" />
+            <input type="text" placeholder="Enter comapny name" />
           </div>
 
           <div className="custom-radio-group">
