@@ -47,7 +47,7 @@ const Profile = () => {
 
         <div className="separator"></div>
 
-        {/* 🔘 Logout Button */}
+       
         <div
           className="logout-wrapper"
           style={{ textAlign: "center", marginTop: "2rem" }}
